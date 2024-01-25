@@ -29,5 +29,9 @@ export class createUserDto {
   @IsArray()
   @IsString()
   education: string[]
+
+  // @IsOptional()
+  // @IsString()
+  // hashedRt: string
   
 }

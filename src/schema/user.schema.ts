@@ -13,7 +13,8 @@ export class User {
   @Prop()
   lastname: string;
 
-  @Prop()
+  
+  @Prop({unique: true})
   email: string;
 
   @Prop()
@@ -24,14 +25,11 @@ export class User {
 
   @Prop()
   education: string[];
+
+  // @Prop()
+  // hashedRt: string
 }
 
 const UserSchema = SchemaFactory.createForClass(User);
-
-// Define the toObject method explicitly
-// UserSchema.method('toObject', function () {
-//   const { hashedPassword, ...rest } = this.toObject();
-//   return rest;
-// });
 
 export { UserSchema };
