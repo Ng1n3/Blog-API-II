@@ -39,3 +39,4 @@ package-lock.json
 tsconfig.build.json
 .env
 .eslintrc.js
+.gitignore
