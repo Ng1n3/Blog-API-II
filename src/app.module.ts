@@ -9,9 +9,9 @@ import { BlogModule } from './blog/blog.module';
 
 @Module({
   imports: [UserModule, MongooseModule.forRoot('mongodb://127.0.0.1:27017/blog-API-II'), ConfigModule.forRoot(), BlogModule],
-  providers: [{
-    provide: APP_GUARD,
-    useClass: JwtAuthGuard
-  }]
+  // providers: [{
+  //   provide: APP_GUARD,
+  //   useClass: JwtAuthGuard
+  // }]
 })
 export class AppModule {}
