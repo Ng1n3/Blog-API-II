@@ -1,4 +1,4 @@
-import { IsArray, IsIn, IsNotEmpty, IsNumber, IsOptional, IsString, MinLength } from "class-validator"
+import { IsArray, IsNotEmpty, IsNumber, IsOptional, IsString, MinLength } from "class-validator"
 
 export class CreateBlog {
   @IsNotEmpty()
@@ -36,6 +36,5 @@ export class CreateBlog {
   @IsNumber()
   readingTime: number
 
-  // @IsIn(['draft', 'published'], {message: 'Invalid state value'})
   state: string
 }
