@@ -8,7 +8,6 @@ import { CreateBlog } from './dto/create-blog.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Blog } from 'src/schema';
 import { Model } from 'mongoose';
-import { NotFoundError } from 'rxjs';
 import { EditBlogDto } from './dto/edit-blog.dto';
 
 @Injectable()

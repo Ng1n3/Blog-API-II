@@ -1,10 +1,16 @@
 import {
   IsArray,
+  IsEnum,
   IsNumber,
   IsOptional,
   IsString,
   MinLength,
 } from 'class-validator';
+
+enum State {
+  draft,
+  published
+}
 
 export class EditBlogDto {
   @IsOptional()
@@ -43,5 +49,6 @@ export class EditBlogDto {
   readingTime: number;
 
   @IsOptional()
-  state: string;
+  @IsEnum(State, {message: 'state must be either "draft" or "published"'})
+  state: State;
 }
